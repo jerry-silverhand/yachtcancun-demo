@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- DEMO: fuera de buscadores (requerimiento 0.2) -->
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Plantilla del buscador (requerimiento 7.2). El servidor la usa para /yates, /yates/usados,
+       /promociones y las categorías; main.js aplica el filtro preestablecido según la URL. -->
+  <title>Yachtcancun</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="is-loading">
+
+  <!--#include virtual="/partials/header.html" -->
+
+  <main id="contenido" data-page="buscador">
+
+    <!-- Encabezado de la variante (usados, promociones, categoría…) -->
+    <section class="shero">
+      <div class="shero__media"><img src="/assets/img/yates/738.jpg" alt=""></div>
+      <div class="shero__content">
+        <h1 class="shero__title" data-search="title"></h1>
+        <p class="shero__text" data-search="intro"></p>
+      </div>
+    </section>
+
+    <section class="search" aria-label="Resultados">
+      <!-- Filtros -->
+      <form class="filters" id="filters" aria-label="Filtros">
+        <div class="filters__head">
+          <p class="filters__title" data-i18n="s_filters"></p>
+          <button type="button" class="filters__close" data-filters-close aria-label="Cerrar">×</button>
+        </div>
+
+        <fieldset class="flt">
+          <legend data-i18n="s_condition"></legend>
+          <div class="chips chips--single" data-render="f-condicion"></div>
+        </fieldset>
+        <fieldset class="flt">
+          <legend data-i18n="qs_type"></legend>
+          <div class="chips" data-render="f-tipo"></div>
+        </fieldset>
+        <fieldset class="flt">
+          <legend data-i18n="f_brand"></legend>
+          <div class="chips" data-render="f-marca"></div>
+        </fieldset>
+        <fieldset class="flt">
+          <legend>
+            <span data-i18n="qs_size"></span>
+            <span class="unit" role="group" aria-label="Unidad">
+              <label><input type="radio" name="unidad" value="ft" checked><span>ft</span></label>
+              <label><input type="radio" name="unidad" value="m"><span>m</span></label>
+            </span>
+          </legend>
+          <div class="range">
+            <input name="eslora_min" inputmode="decimal" data-i18n-attr="placeholder:s_min" aria-label="Eslora mínima">
+            <span>–</span>
+            <input name="eslora_max" inputmode="decimal" data-i18n-attr="placeholder:s_max" aria-label="Eslora máxima">
+          </div>
+        </fieldset>
+        <fieldset class="flt">
+          <legend>
+            <span data-i18n="f_price"></span>
+            <select name="moneda" class="flt__cur" aria-label="Moneda">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="MXN">MXN</option>
+            </select>
+          </legend>
+          <div class="range">
+            <input name="precio_min" inputmode="numeric" data-i18n-attr="placeholder:s_min" aria-label="Precio mínimo">
+            <span>–</span>
+            <input name="precio_max" inputmode="numeric" data-i18n-attr="placeholder:s_max" aria-label="Precio máximo">
+          </div>
+        </fieldset>
+        <fieldset class="flt">
+          <legend data-i18n="f_year"></legend>
+          <div class="range">
+            <input name="anio_min" inputmode="numeric" maxlength="4" data-i18n-attr="placeholder:s_from" aria-label="Año desde">
+            <span>–</span>
+            <input name="anio_max" inputmode="numeric" maxlength="4" data-i18n-attr="placeholder:s_to" aria-label="Año hasta">
+          </div>
+        </fieldset>
+        <fieldset class="flt">
+          <legend data-i18n="s_location"></legend>
+          <select name="pais" data-render="f-pais"></select>
+        </fieldset>
+        <fieldset class="flt">
+          <legend data-i18n="s_mode"></legend>
+          <select name="modalidad">
+            <option value="" data-i18n="qs_any"></option>
+            <option value="compra_completa" data-i18n="s_mode_full"></option>
+            <option value="fraccional" data-i18n="badge_fraccional"></option>
+          </select>
+        </fieldset>
+        <fieldset class="flt flt--toggles">
+          <label class="toggle"><input type="checkbox" name="oferta" value="1"><span data-i18n="s_only_offers"></span></label>
+          <label class="toggle"><input type="checkbox" name="vendidos" value="1"><span data-i18n="s_include_sold"></span></label>
+        </fieldset>
+
+        <div class="filters__foot">
+          <button type="button" class="filters__reset" data-filters-reset data-i18n="s_reset"></button>
+          <button type="button" class="btn btn--solid filters__apply" data-filters-close><span data-render="f-apply"></span></button>
+        </div>
+      </form>
+
+      <!-- Resultados -->
+      <div class="results">
+        <div class="results__bar">
+          <p class="results__count" data-render="r-count" aria-live="polite"></p>
+          <div class="results__tools">
+            <button type="button" class="results__filters" data-filters-open><span data-i18n="s_filters"></span><b data-render="r-active"></b></button>
+            <label class="results__sort">
+              <span data-i18n="s_sort"></span>
+              <select name="orden" form="filters">
+                <option value="recientes" data-i18n="s_sort_recent"></option>
+                <option value="precio_asc" data-i18n="s_sort_price_asc"></option>
+                <option value="precio_desc" data-i18n="s_sort_price_desc"></option>
+                <option value="eslora" data-i18n="s_sort_length"></option>
+                <option value="anio" data-i18n="s_sort_year"></option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <ul class="results__grid" data-render="r-grid"></ul>
+        <div class="results__more" data-render="r-more"></div>
+        <div class="results__empty" data-render="r-empty" hidden>
+          <h2 data-i18n="s_empty_title"></h2>
+          <p data-i18n="s_empty_text"></p>
+          <div class="results__empty-ctas">
+            <a class="btn btn--solid" href="#" data-wa="general"><span data-i18n="s_empty_cta"></span></a>
+            <button type="button" class="btn" data-filters-reset><span data-i18n="s_reset"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--#include virtual="/partials/footer.html" -->
+</body>
+</html>

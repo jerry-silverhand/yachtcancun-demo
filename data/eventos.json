@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "FLIBS_2026",
+    "nombre": "Fort Lauderdale International Boat Show 2026",
+    "nombre_corto": "FLIBS 2026",
+    "fechas": { "inicio": "2026-10-28", "fin": "2026-11-01" },
+    "lugar": "Fort Lauderdale, Florida",
+    "banner": "/assets/img/brand/flibs2026.jpg",
+    "marcas_participantes": [1, 2, 9, 16, 17, 18],
+    "activo": true
+  }
+]

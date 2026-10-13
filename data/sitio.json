@@ -1,0 +1,68 @@
+{
+  "_nota": "Datos de la DEMO. Teléfono/WhatsApp/correo de contacto apuntan a valores de demo, nunca a los brokers reales.",
+  "demo": true,
+  "whatsapp_demo": "520000000000",
+  "email_demo": "demo@marzstudios.com",
+  "telefono_mx": "+52 (998) 883 0254",
+  "telefono_usa": "+1 (866) 216-3866",
+  "direccion": "Pabellón Bonampak, Av. Sayil, local 220, Cancún, Q. Roo",
+  "maps_url": "https://maps.google.com/?q=YACHTCANCUN.COM+Pabellon+Bonampak+Cancun",
+  "maps_embed": "https://www.google.com/maps?q=21.1492229,-86.8201170&z=16&output=embed",
+  "redes": {
+    "instagram": "https://www.instagram.com/yachtcancun/",
+    "youtube": "https://www.youtube.com/user/yachtcancun1",
+    "facebook": "https://www.facebook.com/YACHTCANCUN/",
+    "linkedin": "https://www.linkedin.com/company/yachtcancun"
+  },
+  "metricas": [
+    {
+      "valor": "2004",
+      "clave": "metric_since"
+    },
+    {
+      "valor": "2015",
+      "clave": "metric_iyba"
+    },
+    {
+      "valor": "30–200",
+      "clave": "metric_range"
+    },
+    {
+      "valor": "300K+",
+      "clave": "metric_visits"
+    }
+  ],
+  "metricas_venta": [
+    {
+      "valor": "1.4M",
+      "clave": "m_pageviews"
+    },
+    {
+      "valor": "300K",
+      "clave": "m_visits"
+    },
+    {
+      "valor": "7M",
+      "clave": "m_impressions"
+    },
+    {
+      "valor": "120K",
+      "clave": "m_yt"
+    },
+    {
+      "valor": "43K",
+      "clave": "m_ig"
+    },
+    {
+      "valor": "3,000",
+      "clave": "m_hours"
+    }
+  ],
+  "_nota_metricas": "Métricas del sitio actual (vendemibarco). Las provee el cliente y deben ser editables.",
+  "tipos_cambio_demo": {
+    "_nota": "USD por unidad de cada moneda. Valores aproximados solo para filtrar y convertir en la demo.",
+    "USD": 1,
+    "EUR": 1.08,
+    "MXN": 0.055
+  }
+}

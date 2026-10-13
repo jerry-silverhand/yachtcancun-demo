@@ -1,0 +1,92 @@
+[
+  {
+    "id": 507,
+    "slug": "Iguana-Iguana-X100",
+    "nombre": "Iguana X100",
+    "marca": 17,
+    "linea": "ribs",
+    "imagen": "/assets/img/modelos/iguana-x100.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 506,
+    "slug": "Iguana-Iguana-X100-White-Edition",
+    "nombre": "Iguana X100 White Edition",
+    "marca": 17,
+    "linea": "ribs",
+    "imagen": "/assets/img/modelos/iguana-x100-white-edition.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 509,
+    "slug": "Iguana-iguana-Knight",
+    "nombre": "Iguana Knight",
+    "marca": 17,
+    "linea": "ribs",
+    "imagen": "/assets/img/modelos/iguana-knight.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 508,
+    "slug": "Iguana-Iguana-Fisher",
+    "nombre": "Iguana Fisher",
+    "marca": 17,
+    "linea": "center-consoles",
+    "imagen": "/assets/img/modelos/iguana-fisher.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 510,
+    "slug": "Iguana-Iguana-Sport",
+    "nombre": "Iguana Sport",
+    "marca": 17,
+    "linea": "center-consoles",
+    "imagen": "/assets/img/modelos/iguana-sport.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 511,
+    "slug": "Iguana-Iguana-Original",
+    "nombre": "Iguana Original",
+    "marca": 17,
+    "linea": "center-consoles",
+    "imagen": "/assets/img/modelos/iguana-original.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 512,
+    "slug": "Iguana-Iguana-Coupé",
+    "nombre": "Iguana Coupé",
+    "marca": 17,
+    "linea": "cabins-bow-riders",
+    "imagen": "/assets/img/modelos/iguana-coupe.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 513,
+    "slug": "Iguana-Iguana-Commuter",
+    "nombre": "Iguana Commuter",
+    "marca": 17,
+    "linea": "cabins-bow-riders",
+    "imagen": "/assets/img/modelos/iguana-commuter.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 514,
+    "slug": "Iguana-Iguana-Day-Limo",
+    "nombre": "Iguana Day Limo",
+    "marca": 17,
+    "linea": "cabins-bow-riders",
+    "imagen": "/assets/img/modelos/iguana-day-limo.jpg",
+    "imagen_origen": "astillero"
+  },
+  {
+    "id": 515,
+    "slug": "Iguana-Iguana-Foiler",
+    "nombre": "Iguana Foiler",
+    "marca": 17,
+    "linea": "electric",
+    "imagen": "/assets/img/modelos/iguana-foiler.jpg",
+    "imagen_origen": "astillero"
+  }
+]

@@ -1,0 +1,3 @@
+# DEMO — fuera de buscadores
+User-agent: *
+Disallow: /

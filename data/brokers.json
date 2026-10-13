@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "slug": "Jorge-Moreno",
+    "nombre": "Jorge Moreno",
+    "rol": "Senior Yacht Broker",
+    "foto": "/assets/img/brokers/1.jpg",
+    "es_vendedor": true,
+    "marcas_embajador": [
+      1,
+      9
+    ],
+    "orden": 1
+  },
+  {
+    "id": 4,
+    "slug": "Carlos-Herrera",
+    "nombre": "Carlos Herrera",
+    "rol": "Senior Yacht Broker",
+    "foto": "/assets/img/brokers/4.jpg",
+    "es_vendedor": true,
+    "marcas_embajador": [
+      2
+    ],
+    "orden": 2
+  },
+  {
+    "id": 7,
+    "slug": "Erik-Albarrán",
+    "nombre": "Erik Albarrán",
+    "rol": "Service Manager | Yacht Broker",
+    "foto": "/assets/img/brokers/7.jpg",
+    "es_vendedor": true,
+    "marcas_embajador": [],
+    "orden": 3
+  },
+  {
+    "id": 29,
+    "slug": "Santiago-Moreno",
+    "nombre": "Santiago Moreno",
+    "rol": "Yacht Broker",
+    "foto": "/assets/img/brokers/29.jpg",
+    "es_vendedor": true,
+    "marcas_embajador": [
+      16,
+      18
+    ],
+    "orden": 4
+  },
+  {
+    "id": 34,
+    "slug": "Bryan-Wesley",
+    "nombre": "Bryan Wesley",
+    "rol": "Yacht Broker",
+    "foto": "/assets/img/brokers/34.jpg",
+    "es_vendedor": true,
+    "marcas_embajador": [],
+    "orden": 5
+  },
+  {
+    "id": 38,
+    "slug": "Michel-Moreno",
+    "nombre": "Michel Moreno",
+    "rol": "Yacht Broker",
+    "foto": "/assets/img/brokers/38.jpg",
+    "es_vendedor": true,
+    "marcas_embajador": [
+      17
+    ],
+    "orden": 6
+  }
+]

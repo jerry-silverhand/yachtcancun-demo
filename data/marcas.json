@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "slug": "Astondoa",
+    "nombre": "Astondoa",
+    "logo": "/assets/img/marcas/astondoa-logo.png",
+    "imagen_portada": "/assets/img/marcas/astondoa-fondo.jpg",
+    "descripcion": {
+      "es": "Más de 100 años de diseño y construcción naval española. Distribuidor exclusivo en México.",
+      "en": "Over 100 years of Spanish shipbuilding. Exclusive dealer in Mexico."
+    },
+    "broker_embajador": 1,
+    "visible_en_menu": true,
+    "orden": 1
+  },
+  {
+    "id": 2,
+    "slug": "Fountaine-Pajot",
+    "nombre": "Fountaine Pajot",
+    "logo": "/assets/img/marcas/fountaine-pajot-logo.png",
+    "imagen_portada": "/assets/img/marcas/fountaine-pajot-fondo.jpg",
+    "descripcion": {
+      "es": "Catamaranes de vela y motor.",
+      "en": "Sailing and power catamarans."
+    },
+    "broker_embajador": 4,
+    "visible_en_menu": true,
+    "orden": 2
+  },
+  {
+    "id": 16,
+    "slug": "Virtue",
+    "nombre": "Virtue",
+    "logo": "/assets/img/marcas/virtue-logo.png",
+    "imagen_portada": "/assets/img/marcas/virtue-fondo.jpg",
+    "descripcion": {
+      "es": "Day cruisers eléctricos e híbridos.",
+      "en": "Electric and hybrid day cruisers."
+    },
+    "broker_embajador": 29,
+    "visible_en_menu": true,
+    "orden": 3
+  },
+  {
+    "id": 17,
+    "slug": "Iguana",
+    "nombre": "Iguana",
+    "logo": "/assets/img/marcas/iguana-logo.png",
+    "imagen_portada": "/assets/img/marcas/iguana-fondo.jpg",
+    "descripcion": {
+      "es": "Los botes anfibios Iguana son los más potentes y aptos para la navegación en el mundo. El diseño único de estos barcos de alta tecnología con orugas permite que la Iguana aterrice de manera segura en cualquier tipo de terreno, desde arena suave y barro húmedo hasta rocas irregulares y playas con piedras. Este bote anfibio que Yachtcancun pone a la venta en México es realmente todo terreno. La Iguana se embarca fácilmente en cualquier terreno. El aterrizaje con un bote anfibio Iguana es muy suave porque la operación es similar a la de un avión pues simplemente sigues las olas y activas el tren de aterrizaje antes de aterrizar.",
+      "en": "Iguana amphibious boats are the most powerful and seaworthy in the world. The unique design of these high-tech tracked boats lets the Iguana land safely on any terrain, from soft sand and wet mud to uneven rocks and pebble beaches. The amphibious boat Yachtcancun offers in Mexico is truly all-terrain. The Iguana boards easily anywhere. Landing an Iguana is very smooth because it works like an aircraft: you simply follow the waves and deploy the landing gear before touching down."
+    },
+    "broker_embajador": 38,
+    "visible_en_menu": true,
+    "orden": 4,
+    "video_url": "https://www.youtube.com/watch?v=Dktqym7aJos",
+    "lema": {
+      "es": "Los botes anfibios más capaces. Alto rendimiento en tierra y en el mar.",
+      "en": "The most capable amphibious boats. High performance on land and at sea."
+    },
+    "imagen_hero": "/assets/img/marcas/iguana-fondo.jpg",
+    "lineas": [
+      {
+        "slug": "ribs",
+        "nombre": "RIBS",
+        "subtitulo": {
+          "es": "Embarcaciones semirrígidas inflables anfibias",
+          "en": "Amphibious rigid inflatable boats"
+        },
+        "orden": 1
+      },
+      {
+        "slug": "center-consoles",
+        "nombre": "Center Consoles",
+        "subtitulo": {
+          "es": "Barcos anfibios con consola central",
+          "en": "Amphibious center console boats"
+        },
+        "orden": 2
+      },
+      {
+        "slug": "cabins-bow-riders",
+        "nombre": "Cabins & Bow Riders",
+        "subtitulo": {
+          "es": "Embarcaciones anfibias con cabina tipo bowrider",
+          "en": "Amphibious boats with bowrider-style cabin"
+        },
+        "orden": 3
+      },
+      {
+        "slug": "electric",
+        "nombre": "Electric",
+        "subtitulo": {
+          "es": "La primera embarcación anfibia eléctrica del mundo",
+          "en": "The world's first electric amphibious boat"
+        },
+        "orden": 4
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "YOT",
+    "nombre": "YOT",
+    "logo": "/assets/img/marcas/yot-logo.png",
+    "imagen_portada": "/assets/img/marcas/yot-fondo.jpg",
+    "descripcion": {
+      "es": "Yates deportivos de nueva generación.",
+      "en": "New-generation sport yachts."
+    },
+    "broker_embajador": 29,
+    "visible_en_menu": true,
+    "orden": 5
+  },
+  {
+    "id": 9,
+    "slug": "Vanquish",
+    "nombre": "Vanquish",
+    "logo": "/assets/img/marcas/vanquish-logo.png",
+    "imagen_portada": "/assets/img/marcas/vanquish-fondo.jpg",
+    "descripcion": {
+      "es": "Yates de aluminio de alto desempeño.",
+      "en": "High-performance aluminium yachts."
+    },
+    "broker_embajador": 1,
+    "visible_en_menu": true,
+    "orden": 6
+  }
+]

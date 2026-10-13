@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- DEMO: fuera de buscadores (requerimiento 0.2) -->
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="meta_title">Yachtcancun — Compra y venta de yates nuevos y usados en México</title>
+  <meta name="description" data-i18n-attr="content:meta_desc" content="Broker de yates en Cancún desde 2004.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="is-loading">
+
+  <!--#include virtual="/partials/header.html" -->
+
+  <main id="contenido">
+
+    <!-- 1. Hero: tres caminos -->
+    <section class="hero" id="hero" aria-roledescription="carrusel">
+      <div class="hero__slides">
+        <article class="hero__slide is-active" data-index="0">
+          <!-- Video de YouTube del canal oficial, de fondo y sin audio -->
+          <div class="hero__media hero__media--yt">
+            <img src="/assets/img/marcas/astondoa-fondo.jpg" alt="">
+            <div class="yt-bg" aria-hidden="true"><div id="yt-hero" data-yt="mkhn9YOYhuA"></div></div>
+          </div>
+          <div class="hero__content">
+            <h1 class="hero__title" data-i18n="hero_1_title"></h1>
+            <p class="hero__text" data-i18n="hero_1_text"></p>
+            <a class="btn" href="/yates/nuevos"><span data-i18n="hero_1_cta"></span></a>
+          </div>
+        </article>
+        <article class="hero__slide" data-index="1">
+          <div class="hero__media"><img src="/assets/img/yates/738.jpg" alt=""></div>
+          <div class="hero__content">
+            <h2 class="hero__title" data-i18n="hero_2_title"></h2>
+            <p class="hero__text" data-i18n="hero_2_text"></p>
+            <a class="btn" href="/yates/usados"><span data-i18n="hero_2_cta"></span></a>
+          </div>
+        </article>
+        <article class="hero__slide" data-index="2">
+          <div class="hero__media"><img src="/assets/img/brand/hero-propietarios.jpg" alt=""></div>
+          <div class="hero__content">
+            <h2 class="hero__title" data-i18n="hero_3_title"></h2>
+            <p class="hero__text" data-i18n="hero_3_text"></p>
+            <a class="btn" href="/servicios"><span data-i18n="hero_3_cta"></span></a>
+          </div>
+        </article>
+      </div>
+      <div class="hero__tabs" role="tablist">
+        <button role="tab" class="is-active" aria-selected="true" data-go="0"><span class="hero__bar"><i></i></span><span data-i18n="hero_1_tab"></span></button>
+        <button role="tab" aria-selected="false" data-go="1"><span class="hero__bar"><i></i></span><span data-i18n="hero_2_tab"></span></button>
+        <button role="tab" aria-selected="false" data-go="2"><span class="hero__bar"><i></i></span><span data-i18n="hero_3_tab"></span></button>
+      </div>
+    </section>
+
+    <!-- 2. Buscador rápido -> /yates con parámetros -->
+    <section class="qs" aria-labelledby="qs-title">
+      <form class="qs__form" action="/yates" method="get">
+        <h2 class="qs__title" id="qs-title" data-i18n="qs_title">Encuentra tu yate</h2>
+        <label class="qs__field">
+          <span data-i18n="qs_type">Tipo</span>
+          <select name="tipo" data-render="qs-types"></select>
+        </label>
+        <label class="qs__field">
+          <span data-i18n="qs_size">Eslora</span>
+          <select name="eslora">
+            <option value="" data-i18n="qs_any">Cualquiera</option>
+            <option value="0-40" data-i18n="qs_size_1"></option>
+            <option value="40-60" data-i18n="qs_size_2"></option>
+            <option value="60-90" data-i18n="qs_size_3"></option>
+            <option value="90-" data-i18n="qs_size_4"></option>
+          </select>
+        </label>
+        <label class="qs__field">
+          <span data-i18n="qs_budget">Presupuesto</span>
+          <select name="precio">
+            <option value="" data-i18n="qs_any">Cualquiera</option>
+            <option value="0-500000" data-i18n="qs_budget_1"></option>
+            <option value="500000-1000000" data-i18n="qs_budget_2"></option>
+            <option value="1000000-2000000" data-i18n="qs_budget_3"></option>
+            <option value="2000000-5000000" data-i18n="qs_budget_4"></option>
+            <option value="5000000-" data-i18n="qs_budget_5"></option>
+          </select>
+        </label>
+        <button class="btn btn--solid" type="submit"><span data-i18n="qs_submit">Buscar</span></button>
+      </form>
+    </section>
+
+    <!-- Manifiesto -->
+    <section class="intro">
+      <h2 class="intro__title" data-i18n="intro_title" data-lines></h2>
+      <div class="intro__aside">
+        <p data-i18n="intro_text"></p>
+        <a class="btn" href="/nosotros"><span data-i18n="intro_cta"></span></a>
+      </div>
+    </section>
+
+    <!-- 3. Yates destacados (destacado = true) -->
+    <section class="feat" id="destacados" aria-labelledby="feat-title">
+      <div class="feat__sticky">
+        <div class="feat__media" data-render="feat-media"></div>
+      </div>
+      <div class="feat__list">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="feat_eyebrow"></p>
+          <h2 class="section-title" id="feat-title" data-i18n="feat_title"></h2>
+          <p class="section-text" data-i18n="feat_text"></p>
+        </header>
+        <ol data-render="feat-list"></ol>
+        <a class="btn" href="/yates"><span data-i18n="feat_cta"></span></a>
+      </div>
+    </section>
+
+    <!-- 4. Marcas representadas -->
+    <section class="brands" id="marcas" aria-labelledby="brands-title">
+      <div class="brands__bg" data-render="brands-bg" aria-hidden="true"></div>
+      <header class="section-head section-head--row">
+        <div>
+          <p class="eyebrow" data-i18n="brands_eyebrow"></p>
+          <h2 class="section-title" id="brands-title" data-i18n="brands_title"></h2>
+        </div>
+        <p class="section-text" data-i18n="brands_text"></p>
+      </header>
+      <ul class="brands__list" data-render="brands-list"></ul>
+      <a class="btn" href="/yates/nuevos"><span data-i18n="brands_cta"></span></a>
+    </section>
+
+    <!-- 5. Promociones (en_oferta = true) -->
+    <section class="promo" id="promociones" aria-labelledby="promo-title">
+      <header class="section-head section-head--row">
+        <div>
+          <p class="eyebrow" data-i18n="promo_eyebrow"></p>
+          <h2 class="section-title" id="promo-title" data-i18n="promo_title"></h2>
+        </div>
+        <div class="promo__ctrl">
+          <p class="section-text" data-i18n="promo_text"></p>
+          <div class="rail-nav">
+            <button type="button" data-rail="-1" aria-label="Anterior">←</button>
+            <button type="button" data-rail="1" aria-label="Siguiente">→</button>
+          </div>
+        </div>
+      </header>
+      <ul class="rail" data-render="promo-rail"></ul>
+      <a class="btn" href="/promociones"><span data-i18n="promo_cta"></span></a>
+    </section>
+
+    <!-- 6. Credenciales -->
+    <section class="cred" aria-label="Credenciales">
+      <p class="eyebrow" data-i18n="cred_eyebrow"></p>
+      <ul class="cred__grid" data-render="metrics"></ul>
+      <p class="cred__foot">
+        <img src="/assets/img/brand/iyba.png" alt="IYBA — International Yacht Brokers Association" width="150" height="43">
+        <span data-i18n="cred_presence"></span>
+      </p>
+    </section>
+
+    <!-- 7. Servicios para propietarios -->
+    <section class="owners" id="propietarios" aria-label="Propietarios">
+      <a class="owners__panel" href="/vendemibarco">
+        <img src="/assets/img/brand/fondo-botones.jpg" alt="" loading="lazy">
+        <div class="owners__body">
+          <p class="eyebrow" data-i18n="own_eyebrow"></p>
+          <h3 class="owners__title" data-i18n="own_sell_title"></h3>
+          <p data-i18n="own_sell_text"></p>
+          <span class="btn"><span data-i18n="own_sell_cta"></span></span>
+        </div>
+      </a>
+      <a class="owners__panel" href="/servicios/administracion">
+        <img src="/assets/img/brand/servicios.jpg" alt="" loading="lazy">
+        <div class="owners__body">
+          <p class="eyebrow" data-i18n="own_eyebrow"></p>
+          <h3 class="owners__title" data-i18n="own_admin_title"></h3>
+          <p data-i18n="own_admin_text"></p>
+          <span class="btn"><span data-i18n="own_admin_cta"></span></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- 8. Equipo -->
+    <section class="team" aria-labelledby="team-title">
+      <header class="section-head section-head--row">
+        <div>
+          <p class="eyebrow" data-i18n="team_eyebrow"></p>
+          <h2 class="section-title" id="team-title" data-i18n="team_title"></h2>
+        </div>
+        <p class="section-text" data-i18n="team_text"></p>
+      </header>
+      <ul class="team__grid" data-render="team"></ul>
+      <a class="btn" href="/nosotros"><span data-i18n="team_cta"></span></a>
+    </section>
+
+    <!-- 9. Evento activo (solo si existe) -->
+    <section class="event" data-render="event" hidden></section>
+
+    <!-- 10. Contacto (composición de la página /contact de la referencia) -->
+    <section class="cx" id="contacto" aria-labelledby="cx-title">
+
+      <!-- Hero fijo + tarjetas de contacto que pasan por encima -->
+      <div class="cx-stage">
+        <div class="cx-hero">
+          <img src="/assets/img/brand/contacto.jpg" alt="" loading="lazy">
+          <div class="cx-hero__body">
+            <h2 class="cx-hero__title" id="cx-title" data-i18n="cx_title"></h2>
+            <a class="btn" href="#cx-form"><span data-i18n="cx_cta"></span></a>
+          </div>
+        </div>
+        <div class="cx-info">
+          <ul class="cx-cards" data-render="cx-cards"></ul>
+        </div>
+        <div class="cx-marquee" aria-label="Marcas" data-render="cx-marquee"></div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="cx-form" id="cx-form">
+        <div class="cx-form__intro">
+          <h2 class="cx-form__title" data-i18n="cx_form_title"></h2>
+          <p data-i18n="cx_form_text"></p>
+        </div>
+        <form class="form" id="contact-form" novalidate data-lead="contacto">
+          <div class="hp" aria-hidden="true"><input name="empresa" tabindex="-1" autocomplete="off"></div>
+          <fieldset class="field">
+            <label for="f-nombre" data-i18n="f_name"></label>
+            <input id="f-nombre" name="nombre" autocomplete="name" required data-i18n-attr="placeholder:ph_name">
+          </fieldset>
+          <fieldset class="field">
+            <label for="f-metodo" data-i18n="f_method"></label>
+            <select id="f-metodo" name="metodo" required>
+              <option value="" data-i18n="f_choose"></option>
+              <option value="correo" data-i18n="f_m_email"></option>
+              <option value="telefono" data-i18n="f_m_phone"></option>
+              <option value="whatsapp" data-i18n="f_m_wa"></option>
+            </select>
+          </fieldset>
+          <fieldset class="field">
+            <label for="f-correo" data-i18n="f_email"></label>
+            <input id="f-correo" name="correo" type="email" autocomplete="email" required data-i18n-attr="placeholder:ph_email">
+          </fieldset>
+          <fieldset class="field">
+            <label for="f-tel" data-i18n="f_phone"></label>
+            <input id="f-tel" name="telefono" type="tel" autocomplete="tel" required data-i18n-attr="placeholder:ph_phone">
+          </fieldset>
+          <fieldset class="field">
+            <legend data-i18n="f_interest"></legend>
+            <div class="seg">
+              <label><input type="radio" name="interes" value="comprar" checked><span data-i18n="f_int_buy"></span></label>
+              <label><input type="radio" name="interes" value="vender"><span data-i18n="f_int_sell"></span></label>
+              <label><input type="radio" name="interes" value="servicios"><span data-i18n="f_int_services"></span></label>
+              <label><input type="radio" name="interes" value="otro"><span data-i18n="f_int_other"></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field" data-show="comprar">
+            <label for="f-presupuesto"><span data-i18n="f_budget"></span><em data-i18n="f_optional"></em></label>
+            <select id="f-presupuesto" name="presupuesto">
+              <option value="" data-i18n="f_choose"></option>
+              <option value="250-500k">USD 250,000 – 500,000</option>
+              <option value="500k-1m">USD 500,000 – 1,000,000</option>
+              <option value="1m-2m">USD 1,000,000 – 2,000,000</option>
+              <option value="2m+" data-i18n="f_budget_top"></option>
+            </select>
+          </fieldset>
+          <fieldset class="field" data-show="comprar vender servicios">
+            <label for="f-modelo"><span data-i18n="f_model"></span><em data-i18n="f_optional"></em></label>
+            <input id="f-modelo" name="modelo" data-i18n-attr="placeholder:ph_model">
+          </fieldset>
+          <fieldset class="field" data-show="vender">
+            <span class="field__label"><span data-i18n="f_photo"></span><em data-i18n="f_optional"></em></span>
+            <label class="drop">
+              <input type="file" name="foto" accept="image/jpeg,image/png">
+              <i data-i18n="f_drop"></i>
+              <span data-i18n="f_drop_hint"></span>
+            </label>
+          </fieldset>
+          <fieldset class="field">
+            <label for="f-msg"><span data-i18n="f_message"></span><em data-i18n="f_optional"></em></label>
+            <textarea id="f-msg" name="mensaje" rows="5" data-i18n-attr="placeholder:ph_message"></textarea>
+          </fieldset>
+          <label class="check"><input type="checkbox" name="privacidad" required> <span><span data-i18n="f_privacy_pre"></span> <a href="/aviso-de-privacidad" data-i18n="nav_privacy"></a></span></label>
+          <button class="btn btn--block" type="submit"><span data-i18n="f_submit"></span></button>
+          <div class="form__ok" role="status" hidden>
+            <p class="form__ok-title" data-i18n="f_success_title"></p>
+            <p data-i18n="f_success"></p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Proceso -->
+      <div class="cx-steps">
+        <h2 class="cx-steps__title" data-i18n="cx_steps_title"></h2>
+        <ol class="cx-steps__list">
+          <li data-reveal><em>01</em><h3 data-i18n="cx_s1_t"></h3><p data-i18n="cx_s1_p"></p></li>
+          <li data-reveal style="--rd:120ms"><em>02</em><h3 data-i18n="cx_s2_t"></h3><p data-i18n="cx_s2_p"></p></li>
+          <li data-reveal style="--rd:240ms"><em>03</em><h3 data-i18n="cx_s3_t"></h3><p data-i18n="cx_s3_p"></p></li>
+        </ol>
+      </div>
+
+      <div class="cx-map">
+        <iframe title="Mapa Yachtcancun" loading="lazy" referrerpolicy="no-referrer" data-render="map"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!--#include virtual="/partials/footer.html" -->
+</body>
+</html>

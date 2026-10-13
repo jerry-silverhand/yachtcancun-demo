@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- DEMO: fuera de buscadores (requerimiento 0.2) -->
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="buy_meta_title">Comprar un yate — Yachtcancun</title>
+  <meta name="description" data-i18n-attr="content:buy_meta_desc" content="Yates nuevos y usados en México.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="is-loading">
+
+  <!--#include virtual="/partials/header.html" -->
+
+  <main id="contenido">
+
+    <!-- Hero: elegir entre nuevos y usados -->
+    <section class="choose" aria-label="Comprar">
+      <a class="choose__panel" href="#marcas">
+        <img src="/assets/img/marcas/astondoa-fondo.jpg" alt="">
+        <div class="choose__body">
+          <h1 class="choose__title" data-i18n="buy_new_title"></h1>
+          <p class="choose__text" data-i18n="buy_new_text"></p>
+          <span class="btn"><span data-i18n="buy_new_cta"></span></span>
+        </div>
+      </a>
+      <a class="choose__panel" href="/yates/usados">
+        <img src="/assets/img/yates/548.jpg" alt="">
+        <div class="choose__body">
+          <h2 class="choose__title" data-i18n="buy_used_title"></h2>
+          <p class="choose__text" data-i18n="buy_used_text"></p>
+          <span class="btn"><span data-i18n="buy_used_cta"></span></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- Marcas representadas (lo que hoy tiene /yates/nuevos) -->
+    <section class="bgrid" id="marcas" aria-labelledby="bgrid-title">
+      <header class="section-head section-head--row">
+        <div>
+          <p class="eyebrow" data-i18n="buy_brands_eyebrow"></p>
+          <h2 class="section-title" id="bgrid-title" data-i18n="buy_brands_title"></h2>
+        </div>
+        <p class="section-text" data-i18n="buy_brands_text"></p>
+      </header>
+      <ul class="bgrid__list" data-render="brand-cards"></ul>
+    </section>
+
+    <!-- Ayuda -->
+    <section class="help">
+      <h2 class="help__title" data-i18n="buy_help_title"></h2>
+      <p class="section-text" data-i18n="buy_help_text"></p>
+      <a class="btn btn--solid" href="#" data-wa="general"><span data-i18n="nav_broker"></span></a>
+    </section>
+  </main>
+
+  <!--#include virtual="/partials/footer.html" -->
+</body>
+</html>

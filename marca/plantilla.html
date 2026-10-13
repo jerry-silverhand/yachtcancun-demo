@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- DEMO: fuera de buscadores (requerimiento 0.2) -->
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Plantilla de /marca/{id}/{slug}: el servidor la sirve para cualquier marca y main.js la llena con data/marcas.json -->
+  <title>Yachtcancun</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="is-loading">
+
+  <!--#include virtual="/partials/header.html" -->
+
+  <main id="contenido" data-page="marca">
+
+    <!-- 1. Hero con imagen de portada y logo -->
+    <section class="phero bhero">
+      <div class="phero__media"><img data-brand="hero" alt=""></div>
+      <div class="phero__content">
+        <img class="bhero__logo" data-brand="logo" alt="">
+        <h1 class="phero__title" data-brand="lema"></h1>
+        <div class="phero__ctas">
+          <a class="btn btn--solid" href="#modelos"><span data-i18n="brand_cta_models"></span></a>
+          <a class="btn" href="#broker"><span data-i18n="nav_broker"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Descripción de la marca -->
+    <section class="babout">
+      <p class="eyebrow" data-i18n="brand_about"></p>
+      <p class="babout__text" data-brand="descripcion"></p>
+    </section>
+
+    <!-- 3. Modelos agrupados por línea -->
+    <section class="blines" id="modelos" aria-labelledby="blines-title">
+      <header class="section-head">
+        <p class="eyebrow" data-i18n="brand_lines_eyebrow"></p>
+        <h2 class="section-title" id="blines-title" data-i18n="brand_lines_title"></h2>
+      </header>
+      <div data-render="brand-lines"></div>
+    </section>
+
+    <!-- 4. Video (YouTube, se carga solo al dar play) -->
+    <section class="bvideo" data-render="brand-video" hidden></section>
+
+    <!-- 5. Unidades disponibles de la marca -->
+    <section class="promo bunits" data-render="brand-units-section" hidden>
+      <header class="section-head section-head--row">
+        <div>
+          <p class="eyebrow" data-i18n="brand_units_eyebrow"></p>
+          <h2 class="section-title" data-i18n="brand_units_title"></h2>
+        </div>
+      </header>
+      <ul class="rail" data-render="brand-units"></ul>
+    </section>
+
+    <!-- 6. Broker de la marca + formulario -->
+    <section class="cx-form" id="broker">
+      <div class="cx-form__intro">
+        <p class="eyebrow" data-i18n="brand_broker_eyebrow"></p>
+        <h2 class="cx-form__title" data-i18n="brand_broker_title"></h2>
+        <p data-i18n="brand_broker_text"></p>
+        <div class="bbroker" data-render="brand-broker"></div>
+      </div>
+      <form class="form" novalidate data-lead="marca">
+        <div class="hp" aria-hidden="true"><input name="empresa" tabindex="-1" autocomplete="off"></div>
+        <input type="hidden" name="marca_id" data-brand="id">
+        <fieldset class="field">
+          <label for="b-nombre" data-i18n="f_name"></label>
+          <input id="b-nombre" name="nombre" autocomplete="name" required data-i18n-attr="placeholder:ph_name">
+        </fieldset>
+        <div class="form__row">
+          <fieldset class="field">
+            <label for="b-correo" data-i18n="f_email"></label>
+            <input id="b-correo" name="correo" type="email" autocomplete="email" required data-i18n-attr="placeholder:ph_email">
+          </fieldset>
+          <fieldset class="field">
+            <label for="b-tel" data-i18n="f_phone"></label>
+            <input id="b-tel" name="telefono" type="tel" autocomplete="tel" required data-i18n-attr="placeholder:ph_phone">
+          </fieldset>
+        </div>
+        <fieldset class="field">
+          <label for="b-modelo"><span data-i18n="f_model_interest"></span><em data-i18n="f_optional"></em></label>
+          <select id="b-modelo" name="modelo" data-render="model-options"></select>
+        </fieldset>
+        <fieldset class="field">
+          <label for="b-msg"><span data-i18n="f_message"></span><em data-i18n="f_optional"></em></label>
+          <textarea id="b-msg" name="mensaje" rows="5" data-i18n-attr="placeholder:ph_message"></textarea>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="privacidad" required> <span><span data-i18n="f_privacy_pre"></span> <a href="/aviso-de-privacidad" data-i18n="nav_privacy"></a></span></label>
+        <button class="btn btn--block" type="submit"><span data-i18n="f_submit"></span></button>
+        <div class="form__ok" role="status" hidden>
+          <p class="form__ok-title" data-i18n="f_success_title"></p>
+          <p data-i18n="f_success"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!--#include virtual="/partials/footer.html" -->
+</body>
+</html>

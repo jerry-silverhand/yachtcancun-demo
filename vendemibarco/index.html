@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- DEMO: fuera de buscadores (requerimiento 0.2) -->
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="sell_meta_title">Vender mi barco — Yachtcancun</title>
+  <meta name="description" data-i18n-attr="content:sell_meta_desc" content="Vende tu yate con Yachtcancun.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="is-loading">
+
+  <!--#include virtual="/partials/header.html" -->
+
+  <main id="contenido">
+
+    <!-- 1. Hero + CTA al formulario -->
+    <section class="phero">
+      <div class="phero__media"><img src="/assets/img/yates/739.jpg" alt=""></div>
+      <div class="phero__content">
+        <h1 class="phero__title" data-i18n="sell_title"></h1>
+        <p class="phero__text" data-i18n="sell_lead"></p>
+        <div class="phero__ctas">
+          <a class="btn btn--solid" href="#enlistar"><span data-i18n="sell_cta_list"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manifiesto -->
+    <section class="intro">
+      <h2 class="intro__title" data-i18n="sell_intro_title" data-lines></h2>
+      <div class="intro__aside">
+        <p data-i18n="sell_intro_text"></p>
+        <a class="btn" href="#" data-wa="general"><span data-i18n="nav_broker"></span></a>
+      </div>
+    </section>
+
+    <!-- 2. Métricas de alcance (editables, vienen de data/sitio.json) -->
+    <section class="cred cred--sell" aria-labelledby="metrics-title">
+      <p class="eyebrow" data-i18n="sell_metrics_eyebrow"></p>
+      <h2 class="section-title" id="metrics-title" data-i18n="sell_metrics_title"></h2>
+      <ul class="cred__grid cred__grid--3" data-render="sell-metrics"></ul>
+    </section>
+
+    <!-- 3. Beneficios (los seis actuales) -->
+    <section class="ben" aria-labelledby="ben-title">
+      <header class="ben__head">
+        <p class="eyebrow" data-i18n="sell_ben_eyebrow"></p>
+        <h2 class="section-title" id="ben-title" data-i18n="sell_ben_title"></h2>
+      </header>
+      <ol class="ben__list">
+        <li data-reveal><em>01</em><h3 data-i18n="sell_b1_t"></h3><p data-i18n="sell_b1_p"></p></li>
+        <li data-reveal><em>02</em><h3 data-i18n="sell_b2_t"></h3><p data-i18n="sell_b2_p"></p></li>
+        <li data-reveal><em>03</em><h3 data-i18n="sell_b3_t"></h3><p data-i18n="sell_b3_p"></p></li>
+        <li data-reveal><em>04</em><h3 data-i18n="sell_b4_t"></h3><p data-i18n="sell_b4_p"></p></li>
+        <li data-reveal><em>05</em><h3 data-i18n="sell_b5_t"></h3><p data-i18n="sell_b5_p"></p></li>
+        <li data-reveal><em>06</em><h3 data-i18n="sell_b6_t"></h3><p data-i18n="sell_b6_p"></p></li>
+      </ol>
+    </section>
+
+    <!-- 4. Proceso de venta paso a paso -->
+    <section class="cx-steps cx-steps--4">
+      <h2 class="cx-steps__title" data-i18n="sell_steps_title"></h2>
+      <ol class="cx-steps__list">
+        <li data-reveal><em>01</em><h3 data-i18n="sell_s1_t"></h3><p data-i18n="sell_s1_p"></p></li>
+        <li data-reveal style="--rd:100ms"><em>02</em><h3 data-i18n="sell_s2_t"></h3><p data-i18n="sell_s2_p"></p></li>
+        <li data-reveal style="--rd:200ms"><em>03</em><h3 data-i18n="sell_s3_t"></h3><p data-i18n="sell_s3_p"></p></li>
+        <li data-reveal style="--rd:300ms"><em>04</em><h3 data-i18n="sell_s4_t"></h3><p data-i18n="sell_s4_p"></p></li>
+      </ol>
+    </section>
+
+    <!-- 5. Yates vendidos recientemente (estado = vendido) -->
+    <section class="promo sold" aria-labelledby="sold-title">
+      <header class="section-head section-head--row">
+        <div>
+          <p class="eyebrow" data-i18n="sell_sold_eyebrow"></p>
+          <h2 class="section-title" id="sold-title" data-i18n="sell_sold_title"></h2>
+        </div>
+        <div class="promo__ctrl">
+          <p class="section-text" data-i18n="sell_sold_text"></p>
+          <div class="rail-nav">
+            <button type="button" data-rail="-1" aria-label="Anterior">←</button>
+            <button type="button" data-rail="1" aria-label="Siguiente">→</button>
+          </div>
+        </div>
+      </header>
+      <ul class="rail" data-render="sold-rail"></ul>
+    </section>
+
+    <!-- 6. FAQ -->
+    <section class="faq" aria-labelledby="faq-title">
+      <header class="faq__head">
+        <p class="eyebrow" data-i18n="sell_faq_eyebrow"></p>
+        <h2 class="section-title" id="faq-title" data-i18n="sell_faq_title"></h2>
+      </header>
+      <div class="faq__list">
+        <details><summary data-i18n="faq1_q"></summary><p data-i18n="faq1_a"></p></details>
+        <details><summary data-i18n="faq2_q"></summary><p data-i18n="faq2_a"></p></details>
+        <details><summary data-i18n="faq3_q"></summary><p data-i18n="faq3_a"></p></details>
+        <details><summary data-i18n="faq4_q"></summary><p data-i18n="faq4_a"></p></details>
+      </div>
+    </section>
+
+    <!-- 7. Formulario de enlistado (mismo estilo que el contacto del home) -->
+    <section class="cx-form" id="enlistar">
+      <div class="cx-form__intro">
+        <h2 class="cx-form__title" data-i18n="sell_form_title"></h2>
+        <p data-i18n="sell_form_text"></p>
+      </div>
+      <form class="form" novalidate data-lead="enlistar">
+        <div class="hp" aria-hidden="true"><input name="empresa" tabindex="-1" autocomplete="off"></div>
+
+        <p class="form__group" data-i18n="fs_boat"></p>
+        <div class="form__row">
+          <fieldset class="field">
+            <label for="s-marca" data-i18n="f_brand"></label>
+            <input id="s-marca" name="marca" required data-i18n-attr="placeholder:ph_brand">
+          </fieldset>
+          <fieldset class="field">
+            <label for="s-modelo"><span data-i18n="f_model_name"></span><em data-i18n="f_optional"></em></label>
+            <input id="s-modelo" name="modelo" data-i18n-attr="placeholder:ph_model_name">
+          </fieldset>
+        </div>
+        <div class="form__row">
+          <fieldset class="field">
+            <label for="s-anio" data-i18n="f_year"></label>
+            <input id="s-anio" name="anio" inputmode="numeric" maxlength="4" required data-i18n-attr="placeholder:ph_year">
+          </fieldset>
+          <fieldset class="field">
+            <label for="s-eslora" data-i18n="f_length"></label>
+            <input id="s-eslora" name="eslora_ft" inputmode="decimal" required data-i18n-attr="placeholder:ph_length">
+          </fieldset>
+        </div>
+        <fieldset class="field">
+          <label for="s-tipo" data-i18n="f_type"></label>
+          <select id="s-tipo" name="tipo" required data-render="type-options"></select>
+        </fieldset>
+        <div class="form__row form__row--price">
+          <fieldset class="field">
+            <label for="s-precio" data-i18n="f_price"></label>
+            <input id="s-precio" name="precio" inputmode="numeric" required data-i18n-attr="placeholder:ph_price">
+          </fieldset>
+          <fieldset class="field">
+            <label for="s-moneda" data-i18n="f_currency"></label>
+            <select id="s-moneda" name="moneda" required>
+              <option value="USD">USD</option>
+              <option value="MXN">MXN</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </fieldset>
+        </div>
+        <fieldset class="field">
+          <label for="s-ubicacion"><span data-i18n="f_location"></span><em data-i18n="f_optional"></em></label>
+          <input id="s-ubicacion" name="ubicacion" data-i18n-attr="placeholder:ph_location">
+        </fieldset>
+        <fieldset class="field">
+          <span class="field__label"><span data-i18n="f_photos"></span><em data-i18n="f_optional"></em></span>
+          <label class="drop">
+            <input type="file" name="fotos" accept="image/jpeg,image/png" multiple>
+            <i data-i18n="f_drop"></i>
+            <span data-i18n="f_drop_multi"></span>
+          </label>
+        </fieldset>
+
+        <p class="form__group" data-i18n="fs_contact"></p>
+        <fieldset class="field">
+          <label for="s-nombre" data-i18n="f_name"></label>
+          <input id="s-nombre" name="nombre" autocomplete="name" required data-i18n-attr="placeholder:ph_name">
+        </fieldset>
+        <div class="form__row">
+          <fieldset class="field">
+            <label for="s-correo" data-i18n="f_email"></label>
+            <input id="s-correo" name="correo" type="email" autocomplete="email" required data-i18n-attr="placeholder:ph_email">
+          </fieldset>
+          <fieldset class="field">
+            <label for="s-tel" data-i18n="f_phone"></label>
+            <input id="s-tel" name="telefono" type="tel" autocomplete="tel" required data-i18n-attr="placeholder:ph_phone">
+          </fieldset>
+        </div>
+        <fieldset class="field">
+          <label for="s-msg"><span data-i18n="f_message"></span><em data-i18n="f_optional"></em></label>
+          <textarea id="s-msg" name="comentarios" rows="5" data-i18n-attr="placeholder:ph_message"></textarea>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="privacidad" required> <span><span data-i18n="f_privacy_pre"></span> <a href="/aviso-de-privacidad" data-i18n="nav_privacy"></a></span></label>
+        <button class="btn btn--block" type="submit"><span data-i18n="f_submit_list"></span></button>
+        <div class="form__ok" role="status" hidden>
+          <p class="form__ok-title" data-i18n="f_success_title"></p>
+          <p data-i18n="f_success"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!--#include virtual="/partials/footer.html" -->
+</body>
+</html>
