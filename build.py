@@ -74,6 +74,9 @@ def main():
     with open(os.path.join(DIST, "404.html"), "w", encoding="utf-8") as f:
         f.write(read("404.html"))
     open(os.path.join(DIST, ".nojekyll"), "w").close()
+    # DEMO: fuera de buscadores también desde el servidor (Cloudflare lee _headers)
+    with open(os.path.join(DIST, "_headers"), "w") as f:
+        f.write("/*\n  X-Robots-Tag: noindex, nofollow\n")
     if os.path.exists(os.path.join(ROOT, "CNAME")):
         shutil.copy2(os.path.join(ROOT, "CNAME"), os.path.join(DIST, "CNAME"))
 

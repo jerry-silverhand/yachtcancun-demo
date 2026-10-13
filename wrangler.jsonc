@@ -1,0 +1,14 @@
+// Publicación en Cloudflare (Workers con assets estáticos).
+// Build: python3 build.py  ·  Deploy: npx wrangler deploy
+{
+  "name": "yachtcancun-demo",
+  "compatibility_date": "2026-10-06",
+  "assets": {
+    // Solo se publica la versión estática generada por build.py
+    "directory": "./dist",
+    // /ruta y /ruta/ sirven /ruta/index.html
+    "html_handling": "auto-trailing-slash",
+    // Rutas inexistentes muestran 404.html ("en construcción")
+    "not_found_handling": "404-page"
+  }
+}

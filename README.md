@@ -18,8 +18,8 @@ Las rutas que aún no existen en la demo muestran `404.html` ("en construcción"
 python3 build.py      # genera dist/ (no se sube al repo)
 ```
 
-En Cloudflare Pages: conectar el repositorio, build command `python3 build.py`, output directory `dist`.
-El acceso se limita con Cloudflare Access a los correos autorizados.
+En Cloudflare (Workers & Pages) conectado al repositorio privado: build command `python3 build.py`, deploy command `npx wrangler deploy`.
+`wrangler.jsonc` indica que solo se publica `dist/`.
 
 ## Estructura
 
