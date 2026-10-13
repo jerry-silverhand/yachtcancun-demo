@@ -839,10 +839,31 @@ function initFicha({ listings, marcas, brokers, modelos, sitio }) {
     <div class="ygal__mosaic" data-count="${tiles.length}">
       ${tiles.map((x, n) => `<button type="button" class="ygal__tile" data-open="${x.tab}:${x.i}" aria-label="${esc(name)} ${n + 1}"><img src="${x.src}" alt="" ${n ? 'loading="lazy"' : ''}></button>`).join('')}
     </div>
+    ${tiles.length > 1 ? `<div class="ygal__dots" role="tablist" aria-label="${t('y_tab_ext')}">${tiles.map((_, n) => `<button type="button" role="tab" aria-label="${n + 1} / ${tiles.length}" aria-current="${n === 0}" data-dot="${n}"></button>`).join('')}</div>` : ''}
     <div class="ygal__bar">
       <div class="ygal__tabs">${tabs.map(([k, l, list]) => `<button type="button" data-open="${k}:0">${esc(l)} <span>${list.length}</span></button>`).join('')}</div>
       ${total > 1 ? `<button type="button" class="ygal__all" data-open="ext:0">${t('y_all_photos').replace('{n}', total)}</button>` : ''}
     </div>`);
+
+  // Paginador del carrusel en móvil: sigue el scroll y permite saltar a una foto
+  const mosaic = $('.ygal__mosaic', page);
+  const dots = $$('.ygal__dots button', page);
+  if (mosaic && dots.length) {
+    const tilesEls = $$('.ygal__tile', mosaic);
+    const pad = () => parseFloat(getComputedStyle(mosaic).paddingLeft) || 0;
+    // Distancia de cada foto al borde izquierdo visible del carrusel
+    const offset = (el) => el.getBoundingClientRect().left - mosaic.getBoundingClientRect().left - pad();
+    const sync = () => {
+      let idx = 0;
+      tilesEls.forEach((el, n) => { if (Math.abs(offset(el)) < Math.abs(offset(tilesEls[idx]))) idx = n; });
+      if (mosaic.scrollLeft + mosaic.clientWidth >= mosaic.scrollWidth - 4) idx = tilesEls.length - 1;
+      dots.forEach((d, n) => d.setAttribute('aria-current', n === idx));
+    };
+    mosaic.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true });
+    dots.forEach((d) => d.addEventListener('click', () => {
+      mosaic.scrollBy({ left: offset(tilesEls[+d.dataset.dot]), behavior: 'smooth' });
+    }));
+  }
 
   const lb = $('[data-render="y-lightbox"]');
   let cur = { tab: 'ext', i: 0 };
